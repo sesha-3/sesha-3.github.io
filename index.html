@@ -4,6 +4,19 @@
 <script type="text/javascript" src="validate.js"></script>
 </head>
 <body>
+  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCjLFMi7cSnlBChffvEMZZg5tJmfV9zvAM",
+    authDomain: "amaze-me.firebaseapp.com",
+    databaseURL: "https://amaze-me.firebaseio.com",
+    projectId: "amaze-me",
+    storageBucket: "amaze-me.appspot.com",
+    messagingSenderId: "668746984476"
+  };
+  firebase.initializeApp(config);
+</script>
 <form action="#" name="StudentRegistration" onsubmit="return(validate());">
 
 <table cellpadding="2" width="20%" bgcolor="99FFFF" align="center"

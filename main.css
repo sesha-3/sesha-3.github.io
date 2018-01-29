@@ -31,7 +31,7 @@ body {
 #contact input[type="text"],
 #contact input[type="email"],
 #contact input[type="tel"],
-#contact input[type="number"],
+#contact input[type="tel"],
 #contact select,
 #contact textarea,
 #contact button[type="submit"] {
@@ -70,7 +70,7 @@ fieldset {
 #contact input[type="text"],
 #contact input[type="email"],
 #contact input[type="tel"],
-#contact input[type="number"],
+#contact input[type="tel"],
 #contact select,
 #contact textarea {
   width: 100%;
@@ -83,7 +83,7 @@ fieldset {
 #contact input[type="text"]:hover,
 #contact input[type="email"]:hover,
 #contact input[type="tel"]:hover,
-#contact input[type="number"]:hover,
+#contact input[type="tel"]:hover,
 #contact select:hover,
 #contact textarea:hover {
   -webkit-transition: border-color 0.3s ease-in-out;

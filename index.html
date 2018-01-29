@@ -11,16 +11,16 @@
    <h3>KSM Feedback form</h3>
     <h4>Give us your feedback</h4>
     <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+      <input id="name" placeholder="Your name" type="text" tabindex="1" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+      <input id="email" placeholder="Your Email Address" type="email" tabindex="2" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Your Phone Number " type="tel" tabindex="3" required>
+      <input id="phno" placeholder="Your Phone Number " type="tel" tabindex="3" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Your Register Number" type="tel" tabindex="4" required>
+      <input id="regno" placeholder="Your Register Number" type="tel" tabindex="4" required>
    </fieldset>
      <h4>Size</h4>
     <fieldset>
@@ -35,19 +35,10 @@
     </fieldset>
    <h4>Rate your experience</h4>
    <fieldset>
-    <input class="radio" type="radio" name="scale" value="1" checked>
-      <label>1</label>
-    <input class="radio" type="radio" name="scale" value="2">
-      <label>2</label>
-    <input class="radio" type="radio" name="scale" value="3">
-      <label>3</label>
-    <input class="radio" type="radio" name="scale" value="4">
-      <label>4</label>
-    <input class="radio" type="radio" name="scale" value="5">
-      <label>5</label>
+   <input id="rate" type="range" name="points" min="0" max="10">
    </fieldset>
     <fieldset>
-      <textarea placeholder="Where can we improve?" tabindex="5" required></textarea>
+      <textarea id="txt" placeholder="Where can we improve?" tabindex="5" required></textarea>
     </fieldset>
     <fieldset>
       <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>

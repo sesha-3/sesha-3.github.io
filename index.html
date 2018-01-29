@@ -6,23 +6,10 @@
 <script type="text/javascript" src="validate.js"></script>
 </head>
 <body>
-  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCjLFMi7cSnlBChffvEMZZg5tJmfV9zvAM",
-    authDomain: "amaze-me.firebaseapp.com",
-    databaseURL: "https://amaze-me.firebaseio.com",
-    projectId: "amaze-me",
-    storageBucket: "amaze-me.appspot.com",
-    messagingSenderId: "668746984476"
-  };
-  firebase.initializeApp(config);
-</script>
 <div class="container">  
   <form id="contact" action="" method="post">
    <h3>KSM Feedback form</h3>
-    <h4>Give your feedback</h4>
+    <h4>Give us your feedback</h4>
     <fieldset>
       <input placeholder="Your name" type="text" tabindex="1" required autofocus>
     </fieldset>
@@ -66,5 +53,19 @@
       <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
    </fieldset>
   </form>
-</div></body>
+</div>
+   <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCjLFMi7cSnlBChffvEMZZg5tJmfV9zvAM",
+    authDomain: "amaze-me.firebaseapp.com",
+    databaseURL: "https://amaze-me.firebaseio.com",
+    projectId: "amaze-me",
+    storageBucket: "amaze-me.appspot.com",
+    messagingSenderId: "668746984476"
+  };
+  firebase.initializeApp(config);
+</script>
+ </body>
 </html>

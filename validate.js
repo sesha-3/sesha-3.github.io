@@ -13,29 +13,42 @@ $(function(){
     data= snapshot.val();
   })
 //Entire Form (handler)
-$('#newActivity').submit(function(event) {
+$('#contact').submit(function(event) {
   
   var $form = $(this);
   console.log("Submit to Firebase");
   
-  //disable submit button
-  $form.find("#saveForm").prop('disabled', true);
-  
   //get values to send to Firebase
-  var titleToSend = $('#activityTitle').val();
-  console.log(titleToSend);
+  var nameToSend = $('#name').val();
+  console.log(nameToSend);
   
-  var descriptionToSend = $('#activityDescription').val();
-  console.log(descriptionToSend);
+  var emailToSend = $('#email').val();
+  console.log(emailToSend);
   
-  var categoryToSend= $('#activityCategory').val();
-  console.log(categoryToSend);
+  var phoneToSend= $('#phno').val();
+  console.log(phoneToSend);
+    
+  var regToSend= $('#regno').val();
+  console.log(regToSend);
+	
+  var sizeToSend= $('#size').val();
+  console.log(sizeToSend);
+	
+  var rateToSend= $('#rate').val();
+  console.log(rateToSend);
+	
+  var txtToSend= $('#txt').val();
+  console.log(txtToSend);
   
   //take the values from the form, and put them in an object
   var newActivity= {
-    "description": descriptionToSend,
-    "title": titleToSend,
-    "type": categoryToSend
+    "name": nameToSend ,
+    "email": emailToSend ,
+    "phone": phoneToSend ,
+    "register": regToSend ,
+    "size": sizeToSend ,
+    "rate": rateToSend ,
+    "text": txtToSend
   }
   //put new object in data array
   data.push(newActivity);
@@ -44,52 +57,15 @@ $('#newActivity').submit(function(event) {
     //send the new data to Firebase
 		ref.set(data, function(err){
       if(err){
-        alert("Data no go");
+        alert("Data not sent!");
+      }
+	else{
+	alert("Thanks, "+ nameToSend);
       }
     });
 
     return false;
   })
-  ///Make a login form submission handler
-  $('#login').submit(function(event){
-    var $form = $(this);
-    $form.find('#registerForm').prop('disabled', true);
-    
-    //get the value of the login email
-		var login = $("#loginInput").val();
-    //get the value of the password
-    var password = $("#passwordInput").val();
-     
-    console.log(login, password);
-    register(login, password);
-    
-    return false;
-  })
 
-  ////Detect the authication state
-  var reg = new Firebase("https://data-application1.firebaseio.com");
-  reg.onAuth(function(authData){
-    console.log("info on authentication");
-    if(authData){
-      //you are logged in
-      
-    }else{
-      //you are not logged in
-      
-    }
-  })
-  //////Let a user Register in Firebase
-  //////with password/email
-  function register(email, password){
-    reg.createUser({
-      email: email,
-      password: password
-    }, function(error, userData){
-      if(error){
-        alert("You did not register");
-      }else{
-        alert("You registered"+userData.uid);
-      }
-    })
-  }
+  
 })

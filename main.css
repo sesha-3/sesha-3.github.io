@@ -94,6 +94,13 @@ fieldset {
   max-width: 100%;
   resize: none;
 }
+#contact select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
 
 #contact button[type="submit"] {
   cursor: pointer;

@@ -3,7 +3,6 @@
 <head>
  <title>KSM</title>
  <link type="text/css" rel="stylesheet" href="main.css">
-<script type="text/javascript" src="validate.js"></script>
 </head>
 <body>
 <div class="container">  
@@ -46,7 +45,7 @@
   </form>
 </div>
    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
-<script>
+<script type="text/javascript">
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyCjLFMi7cSnlBChffvEMZZg5tJmfV9zvAM",
@@ -57,6 +56,37 @@
     messagingSenderId: "668746984476"
   };
   firebase.initializeApp(config);
+ //here-----------------------------------------------------------------
+$(document).ready(function() {
+    if ($('#contact').length > 0 ) {
+        contactScript('forForm');
+    }
+});
+//firebase
+function contactScript(value) {
+    var a = { 
+    apiKey: "AIzaSyCjLFMi7cSnlBChffvEMZZg5tJmfV9zvAM",
+    authDomain: "amaze-me.firebaseapp.com",
+    databaseURL: "https://amaze-me.firebaseio.com",
+    projectId: "amaze-me",
+    storageBucket: "amaze-me.appspot.com",
+    messagingSenderId: "668746984476" 
+    };
+    firebase.initializeApp(a);
+    var b = firebase.database().ref("messages");
+        $("#contact").submit(function(a) { $(this), console.log("Submit to Firebase");
+        var c = $("#name").val(),
+            d = $("#email").val(),
+            e = $("#phno").val(),
+            f = $("#regno").val(),
+            g = $("#size").val(),
+            h = $("#rate").val(),
+            i = $("#txt").val(),
+            j = { name: c, email: d, phone:e, regNo:f, size:g, rate:h, text:i};
+        return b.push(j).then(function(a) { 
+            $(".sucess").css("display", "block"), 
+            $(".sucess-none").css("display", "none") }), !1 })   
+}
 </script>
  </body>
 </html>

@@ -18,12 +18,13 @@ body {
   font-size: 12px;
   line-height: 30px;
   color: #777;
-  background: #4f2ce8;
+  background: #4caf50;
 }
 
 .container {
-  max-width: 400px;
-  width: 100%;
+  max-width: 100%;
+  height:auto;
+  width: auto;
   margin: 0 auto;
   position: relative;
 }
@@ -112,7 +113,7 @@ fieldset {
   cursor: pointer;
   width: 100%;
   border: none;
-  background: #4f2ce8;
+  background: #4caf50;
   color: #FFF;
   margin: 0 0 5px;
   padding: 10px;

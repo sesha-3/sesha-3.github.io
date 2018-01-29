@@ -18,7 +18,7 @@ body {
   font-size: 12px;
   line-height: 30px;
   color: #777;
-  background: #ff530d;
+  background: #4f2ce8;
 }
 
 .container {
@@ -112,7 +112,7 @@ fieldset {
   cursor: pointer;
   width: 100%;
   border: none;
-  background: #ff530d;
+  background: #4f2ce8;
   color: #FFF;
   margin: 0 0 5px;
   padding: 10px;
